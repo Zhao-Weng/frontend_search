@@ -1,0 +1,18 @@
+frontend search description
+
+search.html:
+Generates the basic UI. It integrates fixedSrc.js and grabdata.js for searching. 
+
+fixedSrc.js: 
+Adds eventListener for submit button. When submit button is pressed, searchButton callback function will be triggered, 
+which calls 6 data sources. 
+
+grabdata.js:
+Focus on lines from 30070 to 30494. request module of nodejs is used to make Cross orgin request.
+Line 30118 is function that requests JSON from NSF API. 
+Line 30190 is function that requests html page from justia for publication. Then cheerio module is used 
+to parse the data. 
+
+how to test: 
+Click into search.html and types in name and affliation(i.e Kevin, Stanford University). In the console, you will see
+search function updates when extension is installed. 
